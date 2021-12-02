@@ -47,3 +47,8 @@ hr {
   display: flex;
   flex-direction: row;
 }
+
+#pesquisa {
+  display: flex;
+  flex-direction: row;
+}
