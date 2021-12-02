@@ -29,12 +29,16 @@ hr {
   width: 100%;
 }
 
+#family-conteudo {
+  display: flex;
+  justify-content: space-between;
+}
+
 #label-family {
   display: flex;
   flex-direction: column;
 }
 
-#family div {
+#family div , #conteudo-aprender div {
   margin: 5px 0;
 }
-
