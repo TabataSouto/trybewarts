@@ -42,3 +42,8 @@ hr {
 #family div , #conteudo-aprender div {
   margin: 5px 0;
 }
+
+#contagem-pesquisa {
+  display: flex;
+  flex-direction: row;
+}
