@@ -56,3 +56,8 @@ hr {
 .textarea {
   width: 100%;
 }
+
+#comentario {
+  display: flex;
+  flex-direction: column;
+}
