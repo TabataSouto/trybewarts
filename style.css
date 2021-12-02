@@ -52,3 +52,7 @@ hr {
   display: flex;
   flex-direction: row;
 }
+
+.textarea {
+  width: 100%;
+}
