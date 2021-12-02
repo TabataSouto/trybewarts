@@ -15,15 +15,17 @@ function validacaoBotao(event) {
 }
 botaoSubmit.addEventListener('click', validacaoBotao);
 
-// function gerarRadioPesquisa() {
-//   const arrPesquisa = 10;
-//   for (let index = 0; index < arrPesquisa; index += 1) {
-//     const radio = document.createElement('input');
-//     radio.type = 'radio';
-//     radio.name = 'rate';
-//     radio.value = arrPesquisa[index];
-//     radio.innerText = arrPesquisa[index];
-//     pesquisa.appendChild(radio);
-//   }
-// }
-// gerarRadioPesquisa();
+function gerarRadioPesquisa() {
+  const arrPesquisa = 10;
+  for (let index = 0; index < arrPesquisa; index += 1) {
+    const radio = document.createElement('input');
+    const texto = document.createTextNode(index);
+    radio.type = 'radio';
+    radio.name = 'rate';
+    radio.value = arrPesquisa[index];
+    radio.innerText = arrPesquisa[index];
+    pesquisa.appendChild(radio);
+    pesquisa.appendChild(texto);
+  }
+}
+gerarRadioPesquisa();
