@@ -5,21 +5,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Trybewarts</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <header class="header">
     <img class="trybewarts-header-logo" src="./images/trybewarts-header-logo.svg" alt="logo trybe">
     <h1 id="trybewarts-header-title">Trybewarts</h1>
-    <form action="" method="get" class="trybewarts-login">
+    <form method="get" class="trybewarts-login">
       <input type="email" name="email" placeholder="Email" id="email" value="">
       <input type="password" name="password" placeholder="Senha" id="senha" value="">
       <button type="submit" id="botao">Entrar</button>
     </form>
   </header>
+
   <main>
     <form action="" id="evaluation-form">
       <section>
@@ -40,42 +40,42 @@
       </section>
       <hr>
       <section id="family-conteudo">
-      <section id="family">
-        <label for="" id="label-family">Qual sua família?</label>
-        <div>
-          <input type="radio" name="family" value="Frontend">Família Frontend
-        </div>
-        <div>
-          <input type="radio" name="family" value="Backend">Família Backend
-        </div>
-        <div>
-          <input type="radio" name="family" value="FullStack">Família FullStack
+        <section id="family">
+          <label for="" id="label-family">Qual sua família?</label>
+          <div>
+            <input type="radio" name="family" value="Frontend">Família Frontend
+          </div>
+          <div>
+            <input type="radio" name="family" value="Backend">Família Backend
+          </div>
+          <div>
+            <input type="radio" name="family" value="FullStack">Família FullStack
+          </div>
+        </section>
+        <section id="conteudo-aprender">
+          <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>  
+          <div>      
+            <input type="checkbox" value="HoFs">HoFs
+            <input type="checkbox" value="Jest">Jest
+            <input type="checkbox" value="Promises">Promises
+            <input type="checkbox" value="React">React
+            <input type="checkbox" value="SQL">SQL
+            <input type="checkbox" value="Python">Python
+          </div>  
+        </section>
+      </section>
+      <hr>
+      <section id="contagem-pesquisa">
+        <label id="label-rate">Como você avalia a Trybewarts?</label>
+        <div id="contagem">
         </div>
       </section>
-      <section id="conteudo-aprender">
-        <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>  
-        <div>      
-          <input type="checkbox" value="HoFs">HoFs
-          <input type="checkbox" value="Jest">Jest
-          <input type="checkbox" value="Promises">Promises
-          <input type="checkbox" value="React">React
-          <input type="checkbox" value="SQL">SQL
-          <input type="checkbox" value="Python">Python
-        </div>  
-      </section>
-    </section>
-    <hr>
-    <section id="contagem-pesquisa">
-      <label id="label-rate">Como você avalia a Trybewarts?</label>
-      <div id="contagem">
-      </div>
-    </section>
-    <section id="comentario">
-      <label for="textarea" class="textarea">Deixe seu comentário:</label>
+      <section id="comentario">
+        <label for="textarea" class="textarea">Deixe seu comentário:</label>
         <textarea id="textarea" cols="30" rows="10" maxlength="500"></textarea>
-    </section>
+      </section>
     </form>
-    <img src="./images/trybewarts-colored.svg" alt="logo-formulario" id="trybewarts-forms-logo">
+    <img src="./images/trybewarts-colored.svg" alt="logo-formulario"  id="trybewarts-forms-logo">
   </main>
   <script src="script.js"></script>
 
