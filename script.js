@@ -1,20 +1,13 @@
-
-const inputEmail = document.querySelector('#email').value;
-const emailTeste = 'tryber@teste.com';
-const senhaTeste = '123456';
-const inputSenha = document.querySelector('#senha').value;
+const inputEmail = document.querySelector('#email');
+const inputSenha = document.querySelector('#senha');
 const botaoSubmit = document.querySelector('#botao');
 
-function validacaoDados() {
-  if (inputSenha !== senhaTeste  && inputEmail !== emailTeste) {
-    alert('Email ou senha inválidos.');
-  } else {
+function validDados(event) {
+  event.preventDefault();
+  if (inputEmail.value === 'tryber@teste.com' && inputSenha.value) {
     alert('Olá, Tryber!');
+  } else {
+    alert('Email ou senha inválidos');
   }
 }
-
-function validacaoBotao(event) {
-  event.preventDefault();
-  validacaoDados();
-}
-botaoSubmit.addEventListener('click', validacaoBotao);
+botaoSubmit.addEventListener('click', validDados);
