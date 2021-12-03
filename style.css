@@ -61,18 +61,3 @@ hr {
   display: flex;
   flex-direction: column;
 }
-
-/* referencia estilização footer:
-https://pt.stackoverflow.com/questions/
-165214/footer-no-final-do-documento */
-
-#footer {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  position: fixed;
-  background-color: rgb(50, 167, 145);
-  color: white;
-}

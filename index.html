@@ -22,11 +22,11 @@
 
   <main>
     <form action="" id="evaluation-form">
-      <section>
+      <section id="login">
         <input type="text" name="nome" id="input-name" placeholder="Nome">
         <input type="text" name="sobrenome" id="input-lastname" placeholder="Sobrenome">
       </section>
-      <section>
+      <section id="dados-casas">
         <input type="email" name="email" id="input-email" placeholder="Email">
         <label for="house">Casa:
           <select id="house">
@@ -74,18 +74,14 @@
         <label for="textarea" class="textarea">Deixe seu comentário:</label>
         <textarea id="textarea" cols="30" rows="10" maxlength="500"></textarea>
       </section>
-      <section>
+      <section id="termos">
         <label id="label-infos">Você concorda com o uso das informações acima?</label>
         <input type="checkbox" name="aceitar" id="agreement">
       </section>
-      <button type="submit" id="submit-btn">Enviar</button>
+      <button type="submit" id="submit-btn" disabled>Enviar</button>
     </form>
     <img src="./images/trybewarts-colored.svg" alt="logo-formulario"  id="trybewarts-forms-logo">
   </main>
-  
-  <footer id="footer">
-    <p>Direitos reservados à Trybewarts©</p>
-  </footer>
   <script src="script.js"></script>
 
 </body>
