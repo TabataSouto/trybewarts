@@ -1,20 +1,22 @@
 const inputEmail = document.querySelector('#email');
-const emailTeste = 'tryber@teste.com';
-const senhaTeste = '123456';
 const inputSenha = document.querySelector('#senha');
 const botaoSubmit = document.querySelector('#botao');
 const pesquisa = document.querySelector('#contagem');
 const botaoCheckbox = document.querySelector('#submit-btn');
 const checkbox = document.querySelector('#agreement');
+const textoArea = document.querySelector('#textarea');
+const avisoTextArea = document.querySelector('#counter');
 
 function validacaoBotao(event) {
   event.preventDefault();
+  const emailTeste = 'tryber@teste.com';
+  const senhaTeste = '123456';
   if (inputSenha.value === senhaTeste && inputEmail.value === emailTeste) {
     alert('Olá, Tryber!');
   } else {
     alert('Email ou senha inválidos.');
   }
-}
+};
 botaoSubmit.addEventListener('click', validacaoBotao);
 
 // Este link nos ajudou a realizar esta função: https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode
@@ -41,3 +43,13 @@ checkbox.addEventListener('change', (event) => {
     botaoCheckbox.disabled = true;
   }
 });
+
+// Este link nos ajudou a realizar esta função: https://pt.stackoverflow.com/questions/113089/contador-de-caracteres-digitados-em-um-textarea
+
+function limiteTextarea() {
+  const valorLimite = 500;
+  const caracteres = this.value.length;
+  const restantes = valorLimite - caracteres;
+  avisoTextArea.innerHTML = restantes;
+}
+textoArea.addEventListener('keyup', limiteTextarea);

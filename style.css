@@ -68,6 +68,8 @@ https://pt.stackoverflow.com/questions/
 
 #footer {
   display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
   justify-content: center;
   width: 100%;
   left: 0;
