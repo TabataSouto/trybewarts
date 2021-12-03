@@ -16,7 +16,7 @@ function validacaoBotao(event) {
   } else {
     alert('Email ou senha inválidos.');
   }
-};
+}
 botaoSubmit.addEventListener('click', validacaoBotao);
 
 // Este link nos ajudou a realizar esta função: https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode
@@ -53,3 +53,8 @@ function limiteTextarea() {
   avisoTextArea.innerHTML = restantes;
 }
 textoArea.addEventListener('keyup', limiteTextarea);
+
+function mostrarDadosEnviados() {
+  const familiaEscolhida = document.querySelectorAll('input[class"subject":checked');
+  const familiaEscolhida = document.querySelectorAll('input[class"subject":checked');
+}

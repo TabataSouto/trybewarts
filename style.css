@@ -78,3 +78,11 @@ https://pt.stackoverflow.com/questions/
   background-color: rgb(50, 167, 145);
   color: white;
 }
+
+/* referencia estilização textArea:
+https://pt.stackoverflow.com/questions/177917/como-desabilitar-o-resize-do-textarea */
+
+#textarea {
+  width: 100%;
+  resize: none;
+}
