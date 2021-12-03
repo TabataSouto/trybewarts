@@ -7,6 +7,17 @@ const checkbox = document.querySelector('#agreement');
 const textoArea = document.querySelector('#textarea');
 const avisoTextArea = document.querySelector('#counter');
 
+// ---------------------------- para requisito 21
+const pai = document.querySelector('#resposta-form');
+const firstName = document.querySelector('#input-name');
+const lastName = document.querySelector('#input-lastname');
+const email = document.querySelector('#input-email');
+const house = document.querySelector('#house');
+const family = document.querySelectorAll('#input[class="radio-family"]:checked');
+const aprender = document.querySelector('#label-content');
+const notaPesquisa = document.querySelector('#contagem-pesquisa');
+const comentario = document.querySelector('#textarea');
+
 function validacaoBotao(event) {
   event.preventDefault();
   const emailTeste = 'tryber@teste.com';
@@ -16,7 +27,7 @@ function validacaoBotao(event) {
   } else {
     alert('Email ou senha inválidos.');
   }
-};
+}
 botaoSubmit.addEventListener('click', validacaoBotao);
 
 // Este link nos ajudou a realizar esta função: https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode
@@ -53,3 +64,19 @@ function limiteTextarea() {
   avisoTextArea.innerHTML = restantes;
 }
 textoArea.addEventListener('keyup', limiteTextarea);
+
+// Adicionar informações do formulario na tela;
+function respostasDoForm(event) {
+  event.preventDefault();
+  const filhoPai = pai.children;
+  filhoPai[0].innerText = `Nome: ${firstName.value}`;
+  filhoPai[1].innerText = `Sobrenome: ${lastName.value}`;
+  filhoPai[2].innerText = `Email: ${email.value}`;
+  filhoPai[3].innerText = `Casa: ${house.value}`;
+  filhoPai[4].innerText = `Família: ${family.value}`;
+  filhoPai[5].innerText = `Quer aprender: ${aprender.value}`;
+  filhoPai[6].innerText = `Avaliação: ${notaPesquisa.value}`;
+  filhoPai[7].innerText = `Comentário: ${comentario.value}`;
+}
+
+botaoCheckbox.addEventListener('click', respostasDoForm);
