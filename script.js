@@ -54,7 +54,70 @@ function limiteTextarea() {
 }
 textoArea.addEventListener('keyup', limiteTextarea);
 
-function mostrarDadosEnviados() {
-  const familiaEscolhida = document.querySelectorAll('input[class"subject":checked');
-  const familiaEscolhida = document.querySelectorAll('input[class"subject":checked');
+// ---------------------------- para requisito 21
+
+function familiaSelecionada() {
+  const familias = document.querySelectorAll('#family input');
+  let familiaEscolhida;
+  familias.forEach((el) => {
+    if (el.checked) {
+      familiaEscolhida = el.value;
+    }
+  });
+  return familiaEscolhida;
 }
+
+function resultadoPesquisa() {
+  const pesquisaFeita = document.querySelectorAll('#contagem-pesquisa input');
+  let pesquisaRealizada;
+  pesquisaFeita.forEach((el) => {
+    if (el.checked) {
+      pesquisaRealizada = el.value;
+    }
+  });
+  return pesquisaRealizada;
+}
+
+function conteudoAprender() {
+  const conteudo = document.querySelectorAll('#conteudo-aprender input');
+  const conteudoAAprender = [];
+  conteudo.forEach((el) => {
+    if (el.checked) {
+      conteudoAAprender.push(el.value);
+    }
+  });
+  return conteudoAAprender.join(', ');
+}
+
+function pegarDadosForm() {
+  const primeiroNome = document.querySelector('#input-name');
+  const sobrenome = document.querySelector('#input-lastname');
+  const email = document.querySelector('#input-email');
+  const casa = document.querySelector('#house');
+  const comentario = document.querySelector('#textarea');
+
+  return [
+    { name: 'Nome', value: `${primeiroNome.value} ${sobrenome.value}` },
+    { name: 'Email', value: email.value },
+    { name: 'Casa', value: casa.value },
+    { name: 'Matérias', value: conteudoAprender() },
+    { name: 'Família', value: familiaSelecionada() },
+    { name: 'Avaliação', value: resultadoPesquisa() },
+    { name: 'Observações', value: comentario.value },
+  ];
+}
+
+// Adicionar informações do formulario na tela;
+function respostasDoForm(event) {
+  event.preventDefault();
+  const dadosForm = pegarDadosForm();
+  const respostasForm = document.querySelector('#resposta-form');
+  dadosForm.forEach((resposta) => {
+    const item = document.createElement('p');
+    item.innerText = `${resposta.name}: ${resposta.value}`;
+    respostasForm.appendChild(item);
+  });
+  // const removerForm = document.querySelector('#evaluation-form');
+  // removerForm.innerHTML = '';
+}
+botaoCheckbox.addEventListener('click', respostasDoForm);

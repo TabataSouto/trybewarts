@@ -53,10 +53,6 @@ hr {
   flex-direction: row;
 }
 
-.textarea {
-  width: 100%;
-}
-
 #comentario {
   display: flex;
   flex-direction: column;
@@ -74,7 +70,6 @@ https://pt.stackoverflow.com/questions/
   width: 100%;
   left: 0;
   bottom: 0;
-  position: fixed;
   background-color: rgb(50, 167, 145);
   color: white;
 }
