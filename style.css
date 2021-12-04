@@ -1,6 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: rgb(50, 167, 145);
+  color: white;
+  left: 0;
+  padding: 0 15px;
+}
+
+.header input {
+  height: 30px;
+  align-self: center;
+  border-radius: 5px;
+  border: none;
+  margin: 0 5px;
+  width: 130px;
+}
+
+.header button {
+  border-radius: 5px;
+  border: none;
+  width: 130px;
+  margin-left: 5px;
+  background-color: rgb(82, 32, 129);
+  color: white;
+}
+
+#email::placeholder , #senha::placeholder {
+  padding: 0 8px;
 }
 
 .trybewarts-header-logo {
@@ -11,14 +43,27 @@
   display: flex;
 }
 
-main {
+#conteudo-pagina {
+  padding: 30px;
   display: flex;
+  justify-content: center;
 }
 
 #evaluation-form {
   display: flex;
   flex-direction: column;
   width: 675px;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#login , #dados-casas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #trybewarts-forms-logo {
@@ -67,6 +112,7 @@ https://pt.stackoverflow.com/questions/
   align-items: center;
   flex-wrap: nowrap;
   justify-content: center;
+  position: fixed;
   width: 100%;
   left: 0;
   bottom: 0;
@@ -80,4 +126,8 @@ https://pt.stackoverflow.com/questions/177917/como-desabilitar-o-resize-do-texta
 #textarea {
   width: 100%;
   resize: none;
+}
+
+#resposta-form {
+  margin-bottom: 40px;
 }
