@@ -117,7 +117,5 @@ function respostasDoForm(event) {
     item.innerText = `${resposta.name}: ${resposta.value}`;
     respostasForm.appendChild(item);
   });
-  // const removerForm = document.querySelector('#evaluation-form');
-  // removerForm.innerHTML = '';
 }
 botaoCheckbox.addEventListener('click', respostasDoForm);
