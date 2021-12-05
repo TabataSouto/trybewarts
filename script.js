@@ -24,12 +24,13 @@ botaoSubmit.addEventListener('click', validacaoBotao);
 function gerarPesquisa() {
   for (let index = 1; index <= 10; index += 1) {
     const radio = document.createElement('input');
+    const label = document.createElement('label');
     const texto = document.createTextNode(index);
     radio.type = 'radio';
     radio.name = 'rate';
     radio.value = index;
-    pesquisa.appendChild(radio);
-    pesquisa.appendChild(texto);
+    pesquisa.appendChild(label);
+    label.append(radio, texto);
   }
 }
 gerarPesquisa();
