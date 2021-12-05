@@ -13,7 +13,7 @@
   color: white;
   left: 0;
   padding: 0 15px;
-  font-family: 'Inknut Antiqua', serif;
+  font-family: Inknut Antiqua, serif;
   height: 75px;
 }
 
@@ -39,8 +39,7 @@
   margin-bottom: 15px;
 }
 
-#email::placeholder,
-#senha::placeholder {
+#email::placeholder , #senha::placeholder {
   padding: 0 8px;
 }
 
@@ -57,7 +56,7 @@
   display: flex;
   justify-content: space-evenly;
   background-color: rgba(128, 128, 128, 0.247);
-  font-family: 'Inknut Antiqua', serif;
+  font-family: Inknut Antiqua, serif;
 }
 
 #evaluation-form {
@@ -69,7 +68,7 @@
 h2 {
   text-align: center;
   padding-bottom: 20px;
-  font-family: 'Inknut Antiqua', serif;
+  font-family: Inknut Antiqua, serif;
 }
 
 #dados-casas {
@@ -110,7 +109,7 @@ hr {
   line-height: 30px;
 }
 
-#conteudo>label {
+#conteudo > label {
   width: 100%;
   flex: 33%;
   margin-top: 4px;
@@ -152,10 +151,10 @@ https://pt.stackoverflow.com/questions/
   bottom: 0;
   background-color: rgb(50, 167, 145);
   color: white;
-  font-family: 'Inknut Antiqua', serif;
+  font-family: Inknut Antiqua, serif;
 }
 
-#footer>p {
+#footer > p {
   margin-bottom: 0;
   align-self: center;
   padding: 10px 0;
