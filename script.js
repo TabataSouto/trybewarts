@@ -55,8 +55,7 @@ function limiteTextarea() {
 }
 textoArea.addEventListener('keyup', limiteTextarea);
 
-// Requisito 21: Foi baseado na elaboração do projeto da Polyana (turma XP/B)
-
+// Requisito 21: Foi baseado na elaboração do projeto da Polyana e Tonn(turma XP/B)
 function familiaSelecionada() {
   const familias = document.querySelectorAll('#family input');
   let familiaEscolhida;
